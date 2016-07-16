@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Controllers</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <!--
+    The value given to the ng-app directive tells angular what module to look for
+    when angular boots up, in this case our module name is app.
+    -->
+    <div ng-app="app">
+      <!--
+      The role of controllers in Angular is to expose data to our view via $scope,
+      and to add functions to $scope that contain business logic to enhance view
+      behavior. Presentation logic should remain within views and directives.
+      -->
+      <h1>Controllers</h1>
+      <!--ng-controller creates the child scope within the purview of MainCtrl-->
+      <div ng-controller="MainCtrl">
+        <p>{{ message }}</p>
+        <!--ng-submit executes the contained expression when the form is submitted.-->
+        <form ng-submit="updateMessage(newMessage)">
+          <input type="text" ng-model="newMessage">
+          <button type="submit">Update Message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
