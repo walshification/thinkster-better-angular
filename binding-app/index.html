@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Binding</title>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js">
+    </script>
+  </head>
+  <body>
+    <!--ng-app directive defines where the Angular app is running on the page.-->
+    <div ng-app>
+        <h1>Binding with {{}}: {{ message }}</h1><!--nodels can be bound within elements-->
+      <!--
+      ng-model a variable ("message" here) to the scope variable
+      ($scope.message in the controller).
+      -->
+      <!--ng-init sets the initial value of message to 'hello'.-->
+      <input type="text" ng-model="message" ng-init="message = 'hello'">
+      <!--
+      Brackets bind the value of a variable in an Angular expression to be evaluated
+      in the view.
+      -->
+      <p>{{ message }}</p>
+      <p>{{ message + message }}</p><!--easy string concatenation-->
+      <p>{{ message === 'hello' }}</p><!--real-time boolean evaluation-->
+      <p>{{ 1 + 2 }}</p><!--simple math-->
+    
+      <hr />
+      <!--Alternative binding syntax with ng-bind.-->
+      <!--
+      As applications get bigger and take longer to render, it's possible that we can see
+      curly brackets in our browser for a split second while Angular is still compiling
+      our templates. We can avoid this flashing behavior by using ng-bind instead of
+      curly brackets.
+      -->
+      <h1 ng-bind="'Binding with ng-bind: ' + message"></h1>
+      <p ng-bind="message"></p>
+      <p ng-bind="message + message"></p>
+      <p ng-bind="message === 'hello'"></p>
+      <p ng-bind="1 + 2"></p>
+
+      <hr />
+      <h1 ng-bind="One-time Binding"></h1>
+      <!--Only evaluates the bound expression once.-->
+      <p ng-bind="::message === 'hello'"></p>
+    </div>
+  </body>
+</html>
