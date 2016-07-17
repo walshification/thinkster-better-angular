@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app ng-strict-di>
   <head>
     <title>AngularJS Binding</title>
-    <script type="text/javascript"
-            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js">
-    </script>
   </head>
   <body>
     <!--ng-app directive defines where the Angular app is running on the page.-->
-    <div ng-app>
-        <h1>Binding with {{}}: {{ message }}</h1><!--nodels can be bound within elements-->
+    <div>
+      <h1>Binding with Brackets: {{ message }}</h1><!--models can be bound within elements-->
       <!--
       ng-model a variable ("message" here) to the scope variable
       ($scope.message in the controller).
@@ -40,9 +37,11 @@
       <p ng-bind="1 + 2"></p>
 
       <hr />
-      <h1 ng-bind="One-time Binding"></h1>
+      <h1 ng-bind="'One-time Binding'"></h1>
       <!--Only evaluates the bound expression once.-->
       <p ng-bind="::message === 'hello'"></p>
     </div>
+
+    <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
   </body>
 </html>

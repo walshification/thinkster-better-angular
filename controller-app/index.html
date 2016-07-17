@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <title>AngularJS Controllers</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
   </head>
   <body>
     <!--
     The value given to the ng-app directive tells angular what module to look for
     when angular boots up, in this case our module name is app.
     -->
-    <div ng-app="app">
+    <div>
       <!--
       The role of controllers in Angular is to expose data to our view via $scope,
       and to add functions to $scope that contain business logic to enhance view
@@ -27,5 +25,8 @@
         </form>
       </div>
     </div>
+
+    <script src="https://code.angularjs.org/1.4.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
