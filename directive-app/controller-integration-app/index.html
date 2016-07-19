@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app="coolApp">
+  <head>
+    <title>AngularJS Directives</title>
+  </head>
+  <body ng-controller="FunCtrl as fun">
+    <div entering="fun.start()">Hover over me for fun times.</div>
+    <div entering="fun.end()">Hover over me to end fun times.</div>
+
+    <script src="http://code.angularjs.org/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
