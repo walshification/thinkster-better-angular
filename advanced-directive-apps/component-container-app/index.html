@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>AngularJS Advanced Directives</title>
+  </head>
+  <body>
+    <div>
+      <clock timezone="MST"></clock>
+      <panel title="I'm a title">
+        <clock timezone="PST"></clock>
+      </panel>
+
+      <!--Using isolated scopes allows multiple directives to exist at once.-->
+      <panel title="Still a title">
+        <clock timezone="EST"></clock>
+        <clock timezone="CST"></clock>
+        <clock timezone="MST"></clock>
+        <clock timezone="PST"></clock>
+      </panel>
+    </div>
+
+    <script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
