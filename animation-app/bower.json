@@ -1,0 +1,22 @@
+{
+  "name": "animations-app",
+  "description": "A practive app for using Angular animations.",
+  "main": "app.js",
+  "authors": [
+    "Christopher Walsh <walshification@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/walshification/thinkster-better-angular",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8"
+  }
+}

@@ -1,0 +1,39 @@
+<html ng-app="app">
+  <head>
+    <title>ngHide/ngShow CSS Animations</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body ng-controller="TestCtrl as test">
+    <button ng-click="test.toggleBoxOne()">Toggle Box One</button>
+ 
+    <div class="box-one" ng-show="test.showBoxOne">
+      Hello, I am <b>box one</b>.
+    </div>
+
+    <hr />
+
+    <div>
+      <button ng-click="test.addPerson()">Add item to ng-repeat</button>
+      <button ng-click="test.removePerson()">Remove item from ng-repeat</button>
+      <div class="item" ng-repeat="person in test.people">
+        {{ person.name }}
+      </div>
+    </div>
+
+    <hr />
+
+    <button ng-click="test.toggleSize()">
+      Set bigger = {{ !test.bigger }}
+    </button>
+    <button ng-click="test.toggleTheme()">
+      Set lightTheme = {{ !test.lightTheme }}
+    </button>
+
+    <div class="box" ng-class="{ 'bigger': test.bigger, 'light-theme': test.lightTheme }">
+      This is just a box.
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
