@@ -15,3 +15,7 @@ app.controller('TestController', function($templateCache){
 
   console.log($templateCache.get('test.html'));
 });
+
+app.run(function($templateCache){
+  $templateCache.put('test.html', 'Hello {{ test.user.name }}!');
+});
