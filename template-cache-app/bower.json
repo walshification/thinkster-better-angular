@@ -1,0 +1,22 @@
+{
+  "name": "template-cache-app",
+  "description": "A practice app for me to learn about Angular's $templateCache",
+  "main": "app.js",
+  "authors": [
+    "Christopher Walsh <walshification@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/walshification/thinkster-better-angular",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
