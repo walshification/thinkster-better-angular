@@ -3,7 +3,7 @@ var app = angular.module("app", ['ngRoute']);
 app.config(function($routeProvider){
   $routeProvider.when('/', {
     controller: 'TestController as test',
-    template: 'Hello {{ test.user.name }}!',
+    templateUrl: 'test.html',
   })
   .otherwise('/');
 });
