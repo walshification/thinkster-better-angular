@@ -8,8 +8,10 @@ app.config(function($routeProvider){
   .otherwise('/');
 });
 
-app.controller('TestController', function(){
+app.controller('TestController', function($templateCache){
   var self = this;
 
   self.user = { name: 'Chris' };
+
+  console.log($templateCache.get('test.html'));
 });
