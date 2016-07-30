@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="phoneApp">
+  <head>
+    <title>AngularJS Advanced Directives</title>
+  </head>
+  <body>
+    <div ng-controller="PhoneController">
+      <phone number="555-1234"
+             network="network"
+             make-call="leaveVoicemail(number, message)">
+      </phone>
+      <phone number="867-5309"
+             network="network"
+             make-call="leaveVoicemail(number, message)">
+      </phone>
+      <phone number="911"
+             network="network"
+             make-call="leaveVoicemail(number, message)">
+      </phone>
+    </div>
+
+    <script src="https://code.angularjs.org/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
