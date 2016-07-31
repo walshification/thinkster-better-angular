@@ -39,13 +39,8 @@ app.config(function($routeProvider){
       controller: "AppController",
       controllerAs: "app",
       resolve: {
-        app: function($q, $timeout){
-          var defer = $q.defer();
-          $timeout(function(){
-            defer.resolve();
-          }, 5000);
-          return defer.promise;
-        }
+        loadData: appCtrl.loadData,
+        prepData: appCtrl.prepData,
       }
     }
   )
@@ -59,8 +54,9 @@ app.config(function($routeProvider){
   });
 });
 
-app.controller("AppController", function($routeParams){
+var appCtrl = app.controller("AppController", function($routeParams, $route){
   var self = this;
+  console.log($route);
 
   function capitalize(name){
     return name[0].toUpperCase() + name.slice(1)
@@ -76,3 +72,21 @@ app.controller("AppController", function($routeParams){
     self.message = "The app routing is working!";
   };
 });
+
+appCtrl.loadData = function($q, $timeout){
+  var defer = $q.defer();
+  $timeout(function(){
+    defer.resolve('loadData');
+    console.log("loadData");
+  }, 5000);
+  return defer.promise;
+};
+
+appCtrl.prepData = function($q, $timeout){
+  var defer = $q.defer();
+  $timeout(function(){
+    defer.resolve('prepData');
+    console.log("prepData");
+  }, 5000);
+  return defer.promise;
+};
