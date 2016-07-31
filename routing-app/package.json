@@ -1,0 +1,24 @@
+{
+  "name": "routing-app",
+  "version": "1.0.0",
+  "description": "A practice app to help me learn about Angular routing.",
+  "main": "app.js",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walshification/thinkster-better-angular.git"
+  },
+  "author": "Christopher Walsh <walshification@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/walshification/thinkster-better-angular/issues"
+  },
+  "homepage": "https://github.com/walshification/thinkster-better-angular#readme"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "routing-app",
+  "description": "A practice app to help me learn about Angular routing.",
+  "main": "app.js",
+  "authors": [
+    "Christopher Walsh <walshification@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/walshification/thinkster-better-angular",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
