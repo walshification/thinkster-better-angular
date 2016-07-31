@@ -33,6 +33,22 @@ app.config(function($routeProvider){
       controllerAs: "app",
     }
   )
+  .when('/promise',
+    {
+      templateUrl: "app.html",
+      controller: "AppController",
+      controllerAs: "app",
+      resolve: {
+        app: function($q, $timeout){
+          var defer = $q.defer();
+          $timeout(function(){
+            defer.resolve();
+          }, 5000);
+          return defer.promise;
+        }
+      }
+    }
+  )
   .otherwise({
     redirectTo: function(routeParams, path, search){
       console.log("Route Parameters: " + JSON.stringify(routeParams));
