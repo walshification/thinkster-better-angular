@@ -1,11 +1,22 @@
 var app = angular.module('myApp', ['ngRoute']);
 
 app.config(function($routeProvider){
-  $routeProvider.when('/',
+  $routeProvider
+  .when('/',
     {
       templateUrl: "app.html",
       controller: "AppController",
       controllerAs: "app",
+    }
+  )
+  .when('/cookies',
+    {
+      template: "NOM NOM NOM NOM NOM"
+    }
+  )
+  .otherwise(
+    {
+      template: "This route isn't set yet!"
     }
   );
 });
