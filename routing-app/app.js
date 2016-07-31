@@ -14,6 +14,18 @@ app.config(function($routeProvider){
       template: "NOM NOM NOM NOM NOM"
     }
   )
+  .when('/cookies/:cookieType',
+    {
+      redirectTo: function(routeParams, path, search){
+        return "/" + routeParams.cookieType
+      }
+    }
+  )
+  .when('/sugar',
+    {
+      template: 'Sugar cookies are the best!'
+    }
+  )
   .when('/:firstName/:middleName/:lastName',
     {
       templateUrl: "app.html",
@@ -21,11 +33,14 @@ app.config(function($routeProvider){
       controllerAs: "app",
     }
   )
-  .otherwise(
-    {
-      template: "This route isn't set yet!"
+  .otherwise({
+    redirectTo: function(routeParams, path, search){
+      console.log("Route Parameters: " + JSON.stringify(routeParams));
+      console.log("Request Path: " + path);
+      console.log("Query String: " + JSON.stringify(search));
+      return "/"
     }
-  );
+  });
 });
 
 app.controller("AppController", function($routeParams){
