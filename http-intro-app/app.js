@@ -17,16 +17,33 @@ function testService($http) {
         return resp.data.message;
       })
   }
+
+  this.upperCase = function(data) {
+    return $http.post('http://test-routes.herokuapp.com/test/uppercase', data)
+  }
 }
 
 function TestController($scope, testService) {
   var self = this;
+  self.message = "";
+  self.sendMessage = "";
+  self.upperCaseMessage = "";
   getMessage();
 
   function getMessage() {
     testService.get()
       .then(function(message) {
         self.message = message;
+      })
+  }
+
+  self.postData = function(message) {
+    testService.upperCase({message: message})
+      .then(function(body) {
+        console.log("success: ", body.data.message);
+        self.upperCaseMessage = body.data.message;
+      }, function(error) {
+        console.log("error: ", error);
       })
   }
 }
